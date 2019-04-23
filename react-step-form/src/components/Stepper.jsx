@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class Stepper extends Component {
+  
   state: {
     stepper: [];
   };
@@ -16,7 +17,7 @@ class Stepper extends Component {
     switch (page) {
       case 1:
         return (
-          <div className="progress">
+          <div className="progress" style = {{color: "#28a745"}}>
             <div
               className="progress-bar"
               role="progressbar"
@@ -25,7 +26,7 @@ class Stepper extends Component {
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              25%
+             {STEPPER} 1
             </div>
           </div>
         );
@@ -36,11 +37,11 @@ class Stepper extends Component {
               className="progress-bar"
               role="progressbar"
               style= {{width: "50%"}}
-              aria-valuenow="25"
+              aria-valuenow="50"
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              50%
+             {STEPPER} 2
             </div>
           </div>
         );
@@ -51,11 +52,11 @@ class Stepper extends Component {
               className="progress-bar"
               role="progressbar"
               style= {{width: "75%"}}
-              aria-valuenow="25"
+              aria-valuenow="75"
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              75%
+             {STEPPER} 3
             </div>
           </div>
         );
@@ -65,16 +66,17 @@ class Stepper extends Component {
             <div
               className="progress-bar"
               role="progressbar"
-              aria-valuenow="25"
+              style={{width:"100%"}}
+              aria-valuenow="50"
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              100%
+              50%
             </div>
           </div>
         );
     }
   }
 }
-
+const STEPPER = "Step";
 export default Stepper;
